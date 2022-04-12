@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Feedback Collection</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Feedback Collection System</h1>
+    </div>
+    <div class="container">
+      {% if message %}
+        <p class="message">{{ message | safe }}</p>
+      {% endif %}
+      <form action="/submit" method="POST">
+        <div class="card">
+          <h1>Student Details:</h1>
+          <div class="form-group">
+            <h3>Student Name:</h3>
+            <input
+              type="text"
+              name="student_name"
+              placeholder="Full Name"
+            />
+          </div>
+          <div class="form-group">
+            <h3>Student Email:</h3>
+            <input
+              type="text"
+              name="student_email"
+              placeholder="example@somaiya.edu"
+            />
+          </div>
+          <div class="form-group">
+            <h3>Year:</h3>
+            <select name="student_year">
+              <option value="">Select Year</option>
+              <option value="First Year">First Year</option>
+              <option value="Second Year">Second Year</option>
+              <option value="Third Year">Third Year</option>
+              <option value="Fourth Year">Fourth Year</option>
+            </select>
+          </div>
+        </div>
+        <div class="card">
+          <h1>Feedback Details:</h1>
+          <h3>Please rate your overall experience:</h3>
+          <div class="form-group-small">
+            <div class="grey-container">
+              <div class="flex-row">
+                <input type="radio" name="student_rating" value="1"/>
+                <input type="radio" name="student_rating" value="2"/>
+                <input type="radio" name="student_rating" value="3"/>
+                <input type="radio" name="student_rating" value="4"/>
+                <input type="radio" name="student_rating" value="5" checked="checked"/>
+              </div>
+              <div class="flex-row">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <h3>Additional feedback:</h3>
+            <textarea
+              name="student_comment"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Please provide additional comments if any, here..."
+            ></textarea>
+          </div>
+        </div>
+        <input type="submit" value="Submit" class="button" />
+      </form>
+    </div>
+  </body>
+</html>

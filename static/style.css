@@ -1,0 +1,180 @@
+@font-face {
+  font-family: 'Avenir'; 
+  src: url("../static/AvenirLTStd-Medium.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat'; 
+  src: url("../static/Montserrat-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  font-weight: normal;
+  font-style: normal;
+  outline: none;
+}
+
+body {
+  /* background: #f4f4f4; */
+  background: linear-gradient(45deg,#1e56f0, #25e9f7, #25f7b8) no-repeat;
+  background-size: cover;
+  /* background-size: 400% 400%; */
+  /* animation: gradient 10s ease infinite; */
+  font-family: 'Avenir', 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+	color: #25c6f7;
+  padding: 10px;
+  font-size: 36px;
+}
+
+h3 {
+	margin: 10px 0;
+  padding: 10px 0;
+  font-size: 24px;
+}
+
+p {
+  font-size: 20px;
+}
+
+img {
+	width: 100%;
+}
+
+.container {
+	max-width: 70%;
+	margin: auto;
+	overflow: auto;
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card {
+  background: #FFFFFF;
+  padding: 20px 40px;
+  width: 70%;
+  margin: 40px auto;
+}
+
+.card h1 {
+  padding: 0;
+  font-family: 'Montserrat';
+  font-size: 32px;
+  color: #1e79f0;
+  border-bottom: 4px solid #1e79f0;
+  border-radius: 0;
+  max-width: 60%;
+}
+
+.grey-container {
+  background: #E9E9E9;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.message {
+	text-align: center;
+	padding: 10px;
+  background: #f05a55;
+  color: #FFFFFF;
+  width: 70%;
+  margin: 40px auto;
+}
+
+.header {
+  padding: 5px;
+  background: #333;
+  border-radius: 0;
+  margin: auto;
+}
+
+.header h1 {
+  width: 80%;
+  margin: auto;
+  color: #25c6f7;
+}
+
+.logo {
+	width: 300px;
+	display: block;
+	margin: auto;
+}
+
+.form-group {
+	margin: 1rem 0;
+}
+
+.form-group-small {
+  width: 400px;
+  margin: auto;
+}
+
+input[type='text'],
+select,
+textarea {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+	display: block;
+  background: #E9E9E9;
+	width: 100%;
+	padding: 10px;
+	font-size: 1.2rem;
+	/* border: 1px solid #ccc; */
+  resize: none;
+}
+
+.button {
+	display: block;
+	width: 100%;
+	background: #333;
+	color: #fff;
+	padding: 14px 20px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	margin-top: 1rem;
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.button:hover {
+  background: #25f7b8;
+  color: #333;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
